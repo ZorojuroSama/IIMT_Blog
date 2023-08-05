@@ -9,6 +9,7 @@ class ContactTb(models.Model):
     phone = models.IntegerField()
     address = models.CharField(max_length=50)
     message = models.TextField()
-    # created_at = models.DateTimeField(auto_now_add=True, default=datetime.now())
+    created_at = models.DateTimeField(auto_now_add=True, blank=True)
+
     def __str__(self):
         return f"{self.name}, {self.email}"

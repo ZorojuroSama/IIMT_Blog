@@ -5,12 +5,13 @@
 {% block body %}
 
 
-<link rel="stylesheet" href="/static/css/styles.css">
+<link rel="stylesheet" href="/static/css/contact.css">
 <div class="container1 my-3">
-  <div class="container text-left">
+   <div class="container text-left">
     <div class="row gy-5" >
       <div class="col" id="col1">
-        <form class="row g-3">
+        <form class="row g-3" method="post" action="{% url 'contact' %}">
+          {% csrf_token %}
           <div class="col-md-6">
             <label for="inputName4" class="form-label">Fullname</label>
             <input type="text" name="name" class="form-control" id="inputName4" placeholder="Enter your full name" required>
